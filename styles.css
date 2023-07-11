@@ -1,0 +1,95 @@
+:root {
+  --dark-color: #1f2937;
+  --grey-color: #e5e7eb;
+  --blue-color: #3882f6;
+  --light-color-1: #f9faf8;
+  --light-color-2: #e5e7eb;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.navbar,
+.header,
+.footer {
+  background-color: var(--dark-color);
+}
+
+.title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  color: var(--light-color-1);
+}
+
+.nav a,
+.hero--text {
+  font-size: 1.8rem;
+  color: var(--light-color-2);
+}
+
+.logo--text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--light-color-1);
+}
+
+.button--sign-up,
+.cta {
+  background-color: var(--blue-color);
+  color: var(--light-color-1);
+}
+
+.button--sign-up {
+  font-weight: 700;
+}
+
+.info--title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--dark-color);
+}
+
+.quote {
+  background-color: var(--grey-color);
+}
+
+.quote blockquote {
+  font-size: 3.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark-color);
+}
+
+.footer {
+  color: var(--light-color-2);
+}
