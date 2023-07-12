@@ -17,7 +17,7 @@ This project was part of [The Odin Project](https://www.theodinproject.com) cour
 
 ## Project Overview
 
-The assignment was to create a landing page from a design provided by The Odin Project.
+The assignment was to create a landing page from a design provided by The Odin Project. It didn't need to be pixel perfect (i.e. exact dimensions to the design), but should match the overall look and style.
 
 - [Design to recreate](desired-outcome.png)
 - [Fonts and colours to use](desired-fonts-colors.png)
@@ -41,6 +41,7 @@ Mobile:
 
 - Created the basic HTML structure of the landing page.
 - Created the basic CSS for typography, font sizing and colours.
+- Created the CSS layout using flex to match as closely as possible to the design.
   TODO
 - Refactored the CSS to make DRY.
 - Added media queries to CSS to create a responsive web design for smaller devices.
@@ -50,7 +51,6 @@ Mobile:
 
 - HTML5
 - CSS3
-  TODO
   - Flexbox
 
 ### What I learned
