@@ -12,9 +12,15 @@
   <title>Odin Landing Page</title>
 </head>
 
-<body>
+<body class="page dark">
+  <div class="toggle container flex">
+    <input type="checkbox" id="theme" class="toggle__input" checked>
+    <label for="theme" class="toggle__label flex">
+      Toggle theme
+    </label>
+  </div>
   <div class="navbar">
-    <div class="logo-section container flex">
+    <div class="logo__section container flex">
       <div class="logo">
         <p class="logo--text">Header Logo</p>
       </div>
@@ -29,7 +35,7 @@
   </div>
   <header class="header">
     <div class="hero container flex">
-      <div class="hero-header">
+      <div class="hero__header">
         <h1 class="title">This website is awesome</h1>
         <p class="hero--text">This website has some subtext that goes here under the main title. It's a smaller font and
           the color is lower
@@ -44,7 +50,7 @@
   <main class="main">
     <section class="info">
       <div class="container">
-        <h3 class="info--title">Some random information.</h3>
+        <h3 class="info__title">Some random information.</h3>
         <div class="info--item flex">
           <div class="info--box">
             <div class="box"></div>
@@ -79,7 +85,7 @@
     <section>
       <div class="cta container">
         <div>
-          <h4 class="cta--title">Call to action! It's time!</h4>
+          <h4 class="cta__title">Call to action! It's time!</h4>
           <p>Sign up for our product by clicking that button right over there!</p>
         </div>
         <button class="button--sign-up button--cta">Sign up</button>
@@ -89,6 +95,7 @@
   <footer class="footer">
     <div class="container">Copyright &copy; The Odin Project 2021</div>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
