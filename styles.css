@@ -1,3 +1,7 @@
+/*******************************/
+/*      COLOUR VARIABLES       */
+/*******************************/
+
 .dark {
   --body-color: #fff;
   --dark-color: #1f2937;
@@ -18,6 +22,10 @@
   --light-color-2: #e5e7eb;
 }
 
+/*******************************/
+/*            RESET            */
+/*******************************/
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -31,12 +39,45 @@ html {
   padding: 0;
 }
 
+:focus {
+  outline: none;
+}
+
 body {
   font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   line-height: 1.3;
   background-color: var(--body-color);
 }
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  transition: all 0.3s ease;
+}
+
+/*******************************/
+/*     REUSABLE COMPONENTS     */
+/*******************************/
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/*******************************/
+/*        TOGGLE THEME         */
+/*******************************/
 
 /* Remove input box off screen */
 
@@ -64,55 +105,74 @@ body {
   transition: all 0.3s ease;
 }
 
-/* .toggle__label:hover {
+/*******************************/
+/*        HOVER & FOCUS        */
+/*******************************/
+
+.btn:hover,
+.toggle__label:hover {
   background-color: var(--placeholder-color);
-} */
-
-ul {
-  list-style: none;
 }
 
-button {
-  font-family: inherit;
-  font-size: inherit;
-  border: 0;
+.btn:focus,
+.toggle__input:focus + .toggle__label {
+  position: relative;
 }
 
-.container {
-  max-width: 100rem;
-  margin: 0 auto;
+.btn:focus::before,
+.toggle__input:focus + .toggle__label::before {
+  position: absolute;
+  content: "";
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 2px solid var(--light-color-1);
+  border-radius: inherit;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
+.nav a:hover {
+  color: var(--button-color);
+}
+
+a:focus {
+  outline: 1px solid var(--light-color-1);
+}
+
+/*******************************/
+/*     NAV & HERO SECTION      */
+/*******************************/
+
+.navbar {
+  padding: 1.2rem 0 12rem;
 }
 
 .logo__section {
   justify-content: space-between;
 }
 
-.navbar,
-.header,
-.footer {
-  background-color: var(--dark-color);
-}
-
-.title {
-  font-size: 4.8rem;
-  font-weight: 900;
+.logo--text {
+  font-size: 2.4rem;
+  font-weight: 700;
   color: var(--light-color-1);
 }
 
-.navbar {
-  padding: 1.2rem 0 12rem;
+.nav .flex {
+  gap: 2.4rem;
 }
 
-.nav a,
-.hero--text,
-.hero--placeholder {
-  font-size: 1.8rem;
-  color: var(--light-color-2);
+.nav a {
+  text-decoration: none;
+}
+
+.navbar,
+.header {
+  background-color: var(--dark-color);
+}
+
+.header {
+  padding-bottom: 12rem;
+  margin-bottom: 6rem;
 }
 
 .hero {
@@ -121,6 +181,12 @@ button {
 
 .hero__header {
   width: 50%;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  color: var(--light-color-1);
 }
 
 .hero--text {
@@ -134,21 +200,11 @@ button {
   justify-content: center;
 }
 
-.nav a {
-  text-decoration: none;
-}
-
-.nav .flex {
-  gap: 2.4rem;
-}
-
-.logo--text {
-  font-size: 2.4rem;
+.btn--sign-up {
   font-weight: 700;
-  color: var(--light-color-1);
 }
 
-.button--sign-up,
+.btn--sign-up,
 .cta {
   background-color: var(--button-color);
   color: var(--light-color-1);
@@ -156,13 +212,20 @@ button {
   border-radius: 0.8rem;
 }
 
-.button--sign-up {
-  font-weight: 700;
+.nav a,
+.hero--text,
+.hero--placeholder {
+  font-size: 1.8rem;
+  color: var(--light-color-2);
 }
 
-.header {
-  padding-bottom: 12rem;
-  margin-bottom: 6rem;
+/*******************************/
+/*        INFO SECTION         */
+/*******************************/
+
+.info {
+  text-align: center;
+  margin-bottom: 10rem;
 }
 
 .info__title {
@@ -170,11 +233,6 @@ button {
   font-weight: 900;
   color: var(--dark-color);
   margin-bottom: 4rem;
-}
-
-.info {
-  text-align: center;
-  margin-bottom: 10rem;
 }
 
 .info--item {
@@ -197,9 +255,20 @@ button {
   margin-bottom: 1.2rem;
 }
 
+/*******************************/
+/*        QUOTE SECTION        */
+/*******************************/
+
 .quote {
   background-color: var(--quote-color);
   margin-bottom: 10rem;
+}
+
+.quote blockquote {
+  font-size: 3.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark-color);
 }
 
 figure {
@@ -213,12 +282,9 @@ figcaption {
   color: var(--dark-color);
 }
 
-.quote blockquote {
-  font-size: 3.2rem;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--dark-color);
-}
+/*******************************/
+/*         CTA SECTION         */
+/*******************************/
 
 .cta {
   display: flex;
@@ -233,11 +299,16 @@ figcaption {
   font-weight: 700;
 }
 
-.button--cta {
+.btn--cta {
   border: 3px solid var(--light-color-1);
 }
 
+/*******************************/
+/*           FOOTER            */
+/*******************************/
+
 .footer {
+  background-color: var(--dark-color);
   color: var(--light-color-2);
   text-align: center;
   padding: 4rem 0;
